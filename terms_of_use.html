@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stacks – Terms of Use</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --bg-color: #070b10;
+      --card-bg: #101822;
+      --card-border: #1f2a3a;
+      --accent: #f6c453;
+      --accent-soft: #f6c45322;
+      --text-main: #e4ecf7;
+      --text-muted: #98a6c9;
+      --heading: #fdfdfd;
+      --link: #7fc7ff;
+      --link-hover: #c2e6ff;
+      --danger: #ff8585;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #202b3b 0, #070b10 42%, #020308 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 24px 12px 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(11, 18, 29, 0.96), rgba(8, 14, 24, 0.98));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 28px 22px 30px;
+      backdrop-filter: blur(14px);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 40px 42px 42px;
+      }
+    }
+
+    .header {
+      margin-bottom: 22px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      letter-spacing: 0.03em;
+      color: var(--heading);
+    }
+
+    .subtitle {
+      margin-top: 4px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .meta {
+      text-align: right;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(120deg, rgba(246, 196, 83, 0.16), rgba(120, 188, 255, 0.16));
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(246, 196, 83, 0.6);
+    }
+
+    h2 {
+      margin-top: 26px;
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+      color: var(--heading);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 4px;
+      background: radial-gradient(circle at 30% 20%, #ffe9a4 0, #f6c453 40%, #d39128 100%);
+      box-shadow: 0 0 14px rgba(246, 196, 83, 0.75);
+    }
+
+    p {
+      margin: 6px 0 10px;
+      font-size: 0.96rem;
+      color: var(--text-main);
+    }
+
+    ul {
+      margin: 6px 0 14px 20px;
+      padding-left: 14px;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    strong {
+      color: #fbe4aa;
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(127, 199, 255, 0.6);
+      padding-bottom: 1px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      border-bottom-color: rgba(194, 230, 255, 0.9);
+    }
+
+    .section-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+      padding: 8px 10px;
+      border-left: 3px solid var(--accent-soft);
+      margin-top: 4px;
+    }
+
+    .footer {
+      margin-top: 26px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .footer span {
+      opacity: 0.95;
+    }
+
+    .footer strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .danger-text {
+      color: var(--danger);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+      <header class="header">
+        <div class="title-block">
+          <h1>Terms of Use — Stacks</h1>
+          <p class="subtitle">
+            These Terms govern your use of the Stacks game application.
+          </p>
+        </div>
+        <div class="meta">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Legal Agreement</span>
+          </div>
+          <div style="margin-top: 6px;">
+            <strong>Last Updated:</strong> November 15, 2025
+          </div>
+        </div>
+      </header>
+
+      <p>
+        Welcome to <strong>Stacks</strong>. By downloading, installing, or using this game, you agree to be bound by these Terms of Use (“Terms”).
+        If you do not agree with these Terms, you must not use the game.
+      </p>
+      <p>
+        These Terms constitute a legally binding agreement between you (“User”, “You”) and
+        <strong>David do Rosário Taveira</strong> (“Developer”, “We”, “Us”).
+      </p>
+
+      <h2>1. Ownership</h2>
+      <p>
+        All original intellectual property contained in <strong>Stacks</strong>, including but not limited to:
+      </p>
+      <ul>
+        <li>the game concept, mechanics, rules, and overall design;</li>
+        <li>original graphics, art, animations, characters, UI layouts, icons, and branding;</li>
+        <li>code, scripts, systems, databases, and technical architecture;</li>
+        <li>network logic, gameplay logic, and server-side systems;</li>
+      </ul>
+      <p>
+        is the <strong>exclusive property of David do Rosário Taveira</strong>.
+      </p>
+
+      <h2>1.1 Third-Party Audio Assets</h2>
+      <p>
+        Some audio assets (such as sound effects or music) may be sourced from licensed third-party libraries that allow
+        free usage in commercial and non-commercial projects.
+      </p>
+      <p>
+        The copyright for these specific audio assets remains with their <strong>respective creators</strong>.
+        The Developer holds a valid license to use them but does <span class="danger-text">not</span> claim ownership over those third-party audio assets.
+      </p>
+      <p>
+        Nothing in these Terms transfers ownership of any intellectual property to you. You acquire only the limited license described below.
+      </p>
+
+      <h2>2. License to Use</h2>
+      <p>
+        You are granted a <strong>limited, personal, non-exclusive, non-transferable, and revocable</strong> license to:
+      </p>
+      <ul>
+        <li>download, install, and use Stacks on your personal device;</li>
+        <li>access online features while servers are available;</li>
+        <li>play the game for entertainment purposes only.</li>
+      </ul>
+      <p>You are <strong>not permitted</strong> to:</p>
+      <ul>
+        <li>sublicense, sell, rent, lease, loan, export, or distribute the game;</li>
+        <li>modify, decompile, disassemble, reverse engineer, or copy any part of the game;</li>
+        <li>bypass, disable, or interfere with security or technical protection measures;</li>
+        <li>create derivative works based on the game;</li>
+        <li>commercially exploit the game or use it to develop competing products;</li>
+        <li>cheat, hack, exploit bugs, or manipulate gameplay or networking systems.</li>
+      </ul>
+      <p>
+        Any violation of this license may result in immediate termination of your access to the game.
+      </p>
+
+      <h2>3. User Accounts</h2>
+      <p>
+        Some features may require authentication (such as Google login or guest account). You agree to:
+      </p>
+      <ul>
+        <li>provide accurate information when required;</li>
+        <li>maintain the security of your account and device;</li>
+        <li>not access or use other users’ accounts;</li>
+        <li>not create accounts by automated means.</li>
+      </ul>
+      <p>
+        We may suspend or remove accounts that violate these Terms or compromise the integrity of the game or its services.
+      </p>
+
+      <h2>4. In-Game Content and Progress</h2>
+      <p>
+        All in-game items, experience points (XP), ship levels, rewards, stats, progression, and related data:
+      </p>
+      <ul>
+        <li>are <strong>not</strong> your property;</li>
+        <li>have <strong>no real-world monetary value</strong>;</li>
+        <li>cannot be traded, transferred, or sold;</li>
+        <li>may be altered, reset, or removed at any time.</li>
+      </ul>
+      <p>
+        The Developer may adjust XP rules, ship balance, matchmaking, progression systems, rewards, or other in-game parameters at any time.
+      </p>
+
+      <h2>5. User-Generated Content</h2>
+      <p>
+        If Stacks allows you to submit content (such as messages, usernames, or feedback), you grant the Developer a worldwide, royalty-free
+        license to:
+      </p>
+      <ul>
+        <li>store, display, and reproduce such content;</li>
+        <li>modify and adapt such content as necessary for the operation of the game;</li>
+        <li>integrate such content into the game or related services.</li>
+      </ul>
+      <p>
+        You agree not to submit illegal, harmful, offensive, abusive, or otherwise inappropriate content.
+        We may remove such content without prior notice if it violates these Terms or harms the user experience.
+      </p>
+
+      <h2>6. Updates and Changes</h2>
+      <p>
+        Stacks is a live, evolving game. You agree that:
+      </p>
+      <ul>
+        <li>updates may install automatically or be required to continue playing;</li>
+        <li>older versions of the game may stop working or be unsupported;</li>
+        <li>we may add, change, or remove features at any time;</li>
+        <li>we may discontinue online services or certain modes at any time.</li>
+      </ul>
+      <p>
+        We are not obligated to maintain permanent availability of servers, features, or online components.
+      </p>
+
+      <h2>7. Availability and Online Services</h2>
+      <p>
+        Stacks relies on networking infrastructure, servers, and third-party providers (such as PlayFab, Google Play Services, or Azure CDN).
+        You understand that online functionality may be:
+      </p>
+      <ul>
+        <li>temporarily unavailable or unstable;</li>
+        <li>interrupted by maintenance or technical issues;</li>
+        <li>affected by your internet connection or device;</li>
+        <li>modified, limited, or discontinued without prior notice.</li>
+      </ul>
+      <p>
+        The Developer is not liable for progress loss, downtime, server outages, data corruption, or interruptions in connectivity.
+      </p>
+
+      <h2>8. User Conduct</h2>
+      <p>
+        You agree <strong>not</strong> to:
+      </p>
+      <ul>
+        <li>cheat, hack, exploit bugs, or automate gameplay;</li>
+        <li>intentionally disconnect to gain in-game advantages;</li>
+        <li>harass, insult, or harm other players verbally or through gameplay;</li>
+        <li>impersonate others or misrepresent your identity;</li>
+        <li>manipulate matchmaking, rankings, or progression systems;</li>
+        <li>interfere with servers, APIs, or network traffic.</li>
+      </ul>
+      <p>
+        Violations may result in temporary or permanent suspension of your access to the game.
+      </p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by law:
+      </p>
+      <ul>
+        <li>the game is provided <strong>“AS IS”</strong>, without warranties of any kind;</li>
+        <li>we do not guarantee uninterrupted, error-free, or secure gameplay;</li>
+        <li>we are not responsible for device damage, data loss, progress loss, or financial loss;</li>
+        <li>
+          your sole remedy in case of dissatisfaction with the game or these Terms is to
+          <strong>stop using the game</strong>.
+        </li>
+      </ul>
+
+      <h2>10. Termination</h2>
+      <p>
+        We may suspend or terminate your license to use Stacks immediately if:
+      </p>
+      <ul>
+        <li>you violate these Terms;</li>
+        <li>you misuse the game or its services;</li>
+        <li>you engage in cheating, hacking, or other harmful behaviour;</li>
+        <li>we decide to discontinue the game or its online services.</li>
+      </ul>
+      <p>
+        Upon termination:
+      </p>
+      <ul>
+        <li>your license to use the game ends;</li>
+        <li>we may delete or disable your account and in-game progress;</li>
+        <li>you must stop using and uninstall the game from your devices.</li>
+      </ul>
+
+      <h2>11. Privacy</h2>
+      <p>
+        Your use of Stacks is also governed by the Stacks Privacy Policy, available at:
+      </p>
+      <p>
+        <a href="https://boxib.github.io/stacksgame-site/privacy.html" target="_blank" rel="noopener noreferrer">
+          https://boxib.github.io/stacksgame-site/privacy.html
+        </a>
+      </p>
+
+      <h2>12. Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of <strong>Portugal</strong>, excluding its conflict-of-law principles.
+        Any disputes arising out of or relating to these Terms or the game shall be subject to the jurisdiction of the competent courts in Portugal,
+        unless mandatory law provides otherwise.
+      </p>
+
+      <h2>13. Changes to These Terms</h2>
+      <p>
+        We may update or modify these Terms from time to time. When we do, we will update the “Last Updated” date at the top of this page.
+        Continued use of Stacks after changes become effective constitutes your acceptance of the updated Terms.
+      </p>
+
+      <h2>14. Contact</h2>
+      <p>
+        If you have any questions about these Terms or the game, you can contact us at:
+      </p>
+      <p>
+        📧 <a href="mailto:support@stacksgame.space">support@stacksgame.space</a>
+      </p>
+
+      <div class="footer">
+        <span>© All rights reserved — <strong>David do Rosário Taveira</strong></span>
+        <span>Stacks — Terms of Use</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
